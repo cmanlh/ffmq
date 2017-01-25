@@ -19,8 +19,11 @@ package net.timewalker.ffmq4.remote.connection;
 
 import java.net.URI;
 
+import javax.jms.ConnectionConsumer;
 import javax.jms.JMSException;
+import javax.jms.ServerSessionPool;
 import javax.jms.Session;
+import javax.jms.Topic;
 
 import net.timewalker.ffmq4.FFMQConstants;
 import net.timewalker.ffmq4.FFMQException;
@@ -400,5 +403,31 @@ public class RemoteConnection extends AbstractConnection implements PacketTransp
                 }
         	}
         }
+    }
+
+    @Override
+    public Session createSession(int sessionMode) throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Session createSession() throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public ConnectionConsumer createSharedConnectionConsumer(Topic topic, String subscriptionName, String messageSelector,
+                    ServerSessionPool sessionPool, int maxMessages) throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public ConnectionConsumer createSharedDurableConnectionConsumer(Topic topic, String subscriptionName, String messageSelector,
+                    ServerSessionPool sessionPool, int maxMessages) throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

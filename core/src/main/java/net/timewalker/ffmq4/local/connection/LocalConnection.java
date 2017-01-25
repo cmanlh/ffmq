@@ -18,9 +18,12 @@
 package net.timewalker.ffmq4.local.connection;
 
 import javax.jms.Connection;
+import javax.jms.ConnectionConsumer;
 import javax.jms.Destination;
 import javax.jms.JMSException;
+import javax.jms.ServerSessionPool;
 import javax.jms.Session;
+import javax.jms.Topic;
 
 import net.timewalker.ffmq4.FFMQException;
 import net.timewalker.ffmq4.common.connection.AbstractConnection;
@@ -228,5 +231,31 @@ public class LocalConnection extends AbstractConnection
     	// Unregister client ID
     	if (clientID != null)
             ClientIDRegistry.getInstance().unregister(clientID);
+    }
+
+    @Override
+    public Session createSession(int sessionMode) throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Session createSession() throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public ConnectionConsumer createSharedConnectionConsumer(Topic topic, String subscriptionName, String messageSelector,
+                    ServerSessionPool sessionPool, int maxMessages) throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public ConnectionConsumer createSharedDurableConnectionConsumer(Topic topic, String subscriptionName, String messageSelector,
+                    ServerSessionPool sessionPool, int maxMessages) throws JMSException {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

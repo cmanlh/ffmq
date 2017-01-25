@@ -17,6 +17,7 @@
  */
 package net.timewalker.ffmq4.local.session;
 
+import javax.jms.CompletionListener;
 import javax.jms.Destination;
 import javax.jms.InvalidDestinationException;
 import javax.jms.JMSException;
@@ -109,5 +110,42 @@ public class LocalMessageProducer extends AbstractMessageProducer
         {
         	externalAccessLock.readLock().unlock();
         }
+    }
+
+    @Override
+    public void setDeliveryDelay(long deliveryDelay) throws JMSException {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public long getDeliveryDelay() throws JMSException {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public void send(Message message, CompletionListener completionListener) throws JMSException {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void send(Message message, int deliveryMode, int priority, long timeToLive, CompletionListener completionListener) throws JMSException {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void send(Destination destination, Message message, CompletionListener completionListener) throws JMSException {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void send(Destination destination, Message message, int deliveryMode, int priority, long timeToLive, CompletionListener completionListener)
+                    throws JMSException {
+        // TODO Auto-generated method stub
+        
     }
 }

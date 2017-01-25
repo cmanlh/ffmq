@@ -24,6 +24,7 @@ import java.util.Hashtable;
 
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
+import javax.jms.JMSContext;
 import javax.jms.JMSException;
 import javax.naming.Context;
 import javax.naming.NamingException;
@@ -201,5 +202,29 @@ public class FFMQConnectionFactory implements ConnectionFactory, Serializable, R
     		ref.add(new StringRefAddr("clientID",clientID));
     	
     	return ref;
+    }
+
+    @Override
+    public JMSContext createContext() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public JMSContext createContext(String userName, String password) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public JMSContext createContext(String userName, String password, int sessionMode) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public JMSContext createContext(int sessionMode) {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

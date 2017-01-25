@@ -22,15 +22,15 @@ import java.util.Properties;
 
 import javax.jms.JMSException;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import net.timewalker.ffmq4.FFMQClientSettings;
 import net.timewalker.ffmq4.FFMQCoreSettings;
 import net.timewalker.ffmq4.transport.PacketTransportException;
 import net.timewalker.ffmq4.transport.tcp.nio.NIOTcpMultiplexer;
 import net.timewalker.ffmq4.utils.Settings;
 import net.timewalker.ffmq4.utils.async.AsyncTaskManager;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * <p>Holds global settings and managers shared among all clients in a given JVM.</p>
